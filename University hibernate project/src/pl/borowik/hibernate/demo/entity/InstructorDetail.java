@@ -6,17 +6,6 @@ import javax.persistence.*;
 @Table(name = "instructor_detail")
 public class InstructorDetail {
 
-    //annotate the class as an entity and map to db table
-
-    //define the fields
-
-    //annotate the fields with db column names
-
-    //create constructors
-
-    //generate getters and setters
-
-    //generate toString() method
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "id")
@@ -27,8 +16,6 @@ private String youtubeChannel;
 
 @Column(name = "hobby")
 private  String hobby;
-
-// add new field for instructor
 
     @OneToOne(mappedBy = "instructorDetail",
             cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST})
